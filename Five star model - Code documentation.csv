@@ -1,0 +1,22 @@
+Final model notebooks,notebook,Input,Output
+"Creating master data with payment data, customer and loan data",http://localhost:8888/notebooks/Downloads/Fivestar/Five_star_customer_data/02_Master_Data_Creation.ipynb,"five_star_customer_details_masked.csv
+FS_loan_details_masked,
+payment_bounce_data.parquet",master_payment_level.parquet
+Corrected bounce data from Mausmi and loan data,,,payment_bounce_data_masked_corrected.csv
+Creating master bureau data with as of date sep 2025,http://localhost:8888/notebooks/Downloads/Five_star_customer_data/08_Bureau_Master_Data_Creation.ipynb,"BASE_DIR = '/Users/shiva/Downloads/Five_star_customer_data'
+BUREAU_DIR = os.path.join(BASE_DIR, 'bureau_data', 'bureau_data1')
+SET1_DIR = os.path.join(BUREAU_DIR, 'FIVESTAR_CNS_ACTIVE_ACCOUNT_DM_1_set1_output')
+SET2_DIR = os.path.join(BUREAU_DIR, 'FIVESTAR_CNS_ACTIVE_ACCOUNT_DM_1_set2_output')
+OUTPUT_DIR = os.path.join(BASE_DIR, 'bureau_data')
+REPORT_DIR = os.path.join(BASE_DIR, 'eda_reports')",bureau_master_account_level.parquet
+Creating target variable,http://localhost:8888/notebooks/Downloads/Fivestar/Five_star_customer_data/10_master_loan_12_target_variables.ipynb,"payment_bounce_data_masked_corrected.csv
+mapper_df.csv",model_df_12_target_payment_level.parquet
+Bureau features and bounce features,http://localhost:8888/notebooks/Downloads/Fivestar/Five_star_customer_data/10_master_loan_12_target_variables.ipynb,"bureau_master_account_level.parquet
+model_df_12_target_payment_level.parquet",model_df_final.parquet
+Modelling and scoring score cards,http://localhost:8888/notebooks/Downloads/Fivestar/Five_star_customer_data/10_master_loan_12_target_variables.ipynb,use model_df_final.parquet,"model_bounce_bureau' : model,         # Bounce + Bureau
+    'model_bureau_only'   : model_bureau,  # Bureau Only
+    'model_bounce_only'   : model_bounce,  
+
+'feature_cols_bounce_bureau' : feature_cols,
+    'feature_cols_bureau_only'   : bureau_feature_cols,
+    'feature_cols_bounce_only'   : bounce_feature_cols,"
