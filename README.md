@@ -1,7 +1,8 @@
 The important notebooks are
 1. 02_Master_Data_Creation.ipynb : Creates master loan data from raw data
 2. 08_Bureau_master_data_creation.ipynb : Creates tradelines and gives dpd level, granular bureau master
-2. 10_master_loan_12_target_variables.ipynb : Reads bounce data,maps bounce data to bureau, creates bounce and bureau features,does train test split, modeling and scorecard
+3. 10_master_loan_12_target_variables.ipynb : Reads bounce data,maps bounce data to bureau, creates bounce and bureau features,does train test split, modeling and scorecard
+4. 10_master_loan_12_target_variables_coapplicnat.ipynb : Reads bounce data,maps bounce data to bureau, creates bounce and bureau features of applicant and second co applicant,does train test split, modeling and scorecard
 
 Sequence of running the code for training  : 
 1. Payments data (02_Master_Data_Creation.ipynb): The bounce data should be enough here, this was the file created by Mausmi(if not refer to the 02_Master_Data_Creation.ipynb which makes master data from customer, loan and payments data)
